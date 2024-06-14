@@ -17,6 +17,8 @@ RUN poetry install --only main
 COPY . /app/src/
 RUN poetry install --only main
 
+EXPOSE 8000
+
 CMD ["/usr/local/bin/python", "-m", "template_project"]
 
 FROM prod as dev
