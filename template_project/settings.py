@@ -2,7 +2,7 @@ import enum
 from pathlib import Path
 from tempfile import gettempdir
 
-from pydantic import BaseSettings
+from pydantic_settings import BaseSettings
 
 TEMP_DIR = Path(gettempdir())
 
@@ -31,7 +31,7 @@ class Settings(BaseSettings):
     # quantity of workers for uvicorn
     workers_count: int = 1
     # Enable uvicorn reloading
-    reload: bool = False
+    reload: bool = True
 
     # Current environment
     environment: str = "dev"
