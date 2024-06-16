@@ -1,4 +1,4 @@
-# template_project
+# Image generation service 
 
 This project was generated using fastapi_template.
 
