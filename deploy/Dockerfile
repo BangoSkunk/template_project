@@ -19,6 +19,9 @@ RUN poetry install --only main
 
 EXPOSE 8000
 
+ENV SENDER_EMAIL=@gmail.com
+ENV SENDER_PASSW=''
+
 CMD ["/usr/local/bin/python", "-m", "template_project"]
 
 FROM prod as dev
